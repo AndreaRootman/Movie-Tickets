@@ -1,5 +1,5 @@
 """Movie theater ticket system -v4
-confirm order
+Update totals
 created by Andrea Rootman
 """
 
@@ -10,7 +10,7 @@ def confirm_order(ticket, number, cost):
     while confirm != "Y" and confirm != "N":
         confirm = input(f"\nYou have ordered {number} {ticket} ticket(s)"
                         f" at a cost of ${cost * number:.2f\}\n"
-                        f"('Y' or 'N': ")
+                        f"('Y' or 'N': ").upper()
         if confirm == 'Y':
             return True
 
@@ -19,7 +19,7 @@ def confirm_order(ticket, number, cost):
 
 
 #component 3 - Calculate ticket price
-def get_price(type):
+def get_price(type_):
     prices = [["A", 12.5], ["C", 7], ["S", 9], ["G", 0]]
     for price in prices:
         if price in [0] == type:
@@ -55,13 +55,26 @@ while ticket_wanted == "Y":
 
     if confirm_order(ticket_type, num_tickets, cost):
         print("Order confirmed")
+
+        # component 5 - update totals
+        total_sales += cost
+        tickets_sold += num_tickets
+        if ticket_type == "A":
+            adult_tickets += num_tickets
+        elif ticket_type == "S":
+            student_tickets += num_tickets
+        elif ticket_type == "C":
+            child_tickets += num_tickets
+        else:
+            gift_tickets += num_tickets
+
+
     else:
         print("Order cancelled")
 
 
-ticket_wanted = input("Do you want  to sell another ticket? (Y/N):"
+    ticket_wanted = input("Do you want  to sell another ticket? (Y/N): "
                           "").upper()
-
 
 
 #main routine
