@@ -3,7 +3,15 @@ Update totals
 created by Andrea Rootman
 """
 
-
+# component 6 - print summary
+def print_summary(tickets_sold, adult_tickets, student_tickets, child_tickets, gift_tickets, total_sales):
+    print("="*20)
+    print(f"The total tickets sold today was {tickets_sold}\n"
+          f"This was made up of:\n"
+          f"\t{adult_tickets} for adults; and\n"
+          f"\t{student_tickets} for students; and\n"
+          f"\t{child_tickets} for children; and\n"
+          f"\t{gift_tickets} for gift vouchers: and\n")
 # component 4 - confirm order
 def confirm_order(ticket, number, cost):
     confirm = ""
@@ -47,7 +55,7 @@ while ticket_wanted == "Y":
                         "\t 'A' for Adult, or \n"
                         "\t 's' for Student, or\n"
                         "\t 'C' for Child, or \n"
-                        "\t 'T' for Gift Voucher\n"
+                        "\t 'G' for Gift Voucher\n"
                         ">> ").upper()
     num_tickets = int(input(f"How many {ticket_type} tickets do you want:"
                             f""))
@@ -57,7 +65,7 @@ while ticket_wanted == "Y":
         print("Order confirmed")
 
         # component 5 - update totals
-        total_sales += cost
+        total_sales += cost * num_tickets
         tickets_sold += num_tickets
         if ticket_type == "A":
             adult_tickets += num_tickets
@@ -75,7 +83,11 @@ while ticket_wanted == "Y":
 
     ticket_wanted = input("Do you want  to sell another ticket? (Y/N): "
                           "").upper()
+#component 6 - produce summary of sales
+print_summary(tickets_sold, adult_tickets, student_tickets, child_tickets, gift_tickets, total_sales)
+
 
 
 #main routine
 sell_ticket()
+print("Goodbye\nThanks for using Potato Movies")

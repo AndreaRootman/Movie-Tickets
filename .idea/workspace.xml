@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f8eec4e-d84a-424c-b669-893f4c90bb97" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/MovieTickets_v5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Movietickets_v4.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movietickets_v4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movietickets_v6.py" beforeDir="false" afterPath="$PROJECT_DIR$/Movietickets_v6.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +24,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2MyYAkc8xRGfQrHy57KllV62k1F" />
   <component name="ProjectViewState">
