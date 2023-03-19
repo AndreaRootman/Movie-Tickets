@@ -1,6 +1,6 @@
 """Movie theater ticket system -v4
 Update totals
-created by Andrea Rootman
+created by Andrea
 """
 
 
@@ -67,13 +67,11 @@ while ticket_wanted == "Y":
             child_tickets += num_tickets
         else:
             gift_tickets += num_tickets
-
-
     else:
         print("Order cancelled")
 
 
-    ticket_wanted = input("Do you want  to sell another ticket? (Y/N): "
+    ticket_wanted = input("Do you want  to sell another ticket? Y/N: "
                           "").upper()
 
 

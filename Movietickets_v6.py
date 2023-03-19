@@ -1,17 +1,18 @@
-"""Movie theater ticket system -v4
-Update totals
-created by Andrea Rootman
+"""Movie theater ticket system -v6
+Print end summary
+created by Andrea
 """
+
 
 # component 6 - print summary
 def print_summary(tickets_sold, adult_tickets, student_tickets, child_tickets, gift_tickets, total_sales):
     print("="*20)
     print(f"The total tickets sold today was {tickets_sold}\n"
-          f"This was made up of:\n"
+          f"This was made up of: \n"
           f"\t{adult_tickets} for adults; and\n"
           f"\t{student_tickets} for students; and\n"
           f"\t{child_tickets} for children; and\n"
-          f"\t{gift_tickets} for gift vouchers: and\n")
+          f"\t{gift_tickets} gift vouchers \n")
 # component 4 - confirm order
 def confirm_order(ticket, number, cost):
     confirm = ""
@@ -47,7 +48,7 @@ def sell_ticket():
     total_tickets = 0
 
 
-#component 2 - get the category and number of tickets required
+#component 2 - get catwgory and number of tickets required
 
 ticket_wanted = "Y"
 while ticket_wanted == "Y":
@@ -64,8 +65,8 @@ while ticket_wanted == "Y":
     if confirm_order(ticket_type, num_tickets, cost):
         print("Order confirmed")
 
-        # component 5 - update totals
-        total_sales += cost * num_tickets
+# component 5 - Update totals
+        total_tickets += cost * num_tickets
         tickets_sold += num_tickets
         if ticket_type == "A":
             adult_tickets += num_tickets
@@ -80,11 +81,10 @@ while ticket_wanted == "Y":
     else:
         print("Order cancelled")
 
-
     ticket_wanted = input("Do you want  to sell another ticket? (Y/N): "
                           "").upper()
 #component 6 - produce summary of sales
-print_summary(tickets_sold, adult_tickets, student_tickets, child_tickets, gift_tickets, total_sales)
+print_summary("tickets_sold, adult_tickets, student_tickets, child_tickets, gift_tickets, total_sales")
 
 
 
